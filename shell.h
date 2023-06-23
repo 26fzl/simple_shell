@@ -156,7 +156,7 @@ int builtin_help(data_of_program *data);
 int builtin_alias(data_of_program *data);
 
 
-/*======== builtins_env.c ========*/
+/*======== built_env.c ========*/
 
 /* Shows the environment where the shell runs */
 int builtin_env(data_of_program *data);
@@ -189,7 +189,7 @@ void print_environ(data_of_program *data);
 /************** HELPERS FOR PRINTING **************/
 
 
-/*======== helpers_print.c ========*/
+/*======== help_print.c ========*/
 
 /* Prints a string in the standar output */
 int _print(char *string);
@@ -204,7 +204,7 @@ int _print_error(int errorcode, data_of_program *data);
 /************** HELPERS FOR STRINGS MANAGEMENT **************/
 
 
-/*======== helpers_string.c ========*/
+/*======== help_string.c ========*/
 
 /* Counts the number of characters of a string */
 int str_length(char *string);
@@ -222,7 +222,7 @@ char *str_concat(char *string1, char *string2);
 void str_reverse(char *string);
 
 
-/*======== helpers_numbers.c ========*/
+/*======== help_num.c ========*/
 
 /* Cast from int to string */
 void long_to_string(long number, char *string, int base);
