@@ -107,12 +107,9 @@ char *str_concat(char *string1, char *string2)
 	if (string2 == NULL)
 		string2 = "";
 	len2 = str_length(string2);
-
-<<<<<<< HEAD
-	result = malloc(sizeof(char) * (len2 + len + 1));
-=======
+	
 	result = malloc(sizeof(char) * (len1 + len2 + 1));
->>>>>>> 950eda6a185544d1cf509b8cc763537d9f81d7a1
+
 	if (result == NULL)
 	{
 		errno = ENOMEM;
