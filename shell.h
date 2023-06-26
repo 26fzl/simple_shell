@@ -13,6 +13,10 @@
 #include <signal.h>
 #include <fcntl.h>
 
+/************* MACROS **************/
+
+#include "macros.h" /* for msg help and prompt */
+
 
 /************* STRUCTURES **************/
 
