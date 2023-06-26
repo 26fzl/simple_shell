@@ -108,7 +108,7 @@ char *str_concat(char *string1, char *string2)
 		string2 = "";
 	len2 = str_length(string2);
 
-	result = malloc(sizeof(char) * (len + len + 1));
+	result = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (result == NULL)
 	{
 		errno = ENOMEM;
@@ -145,7 +145,7 @@ void str_reverse(char *string)
 
 	while (x < len)
 	{
-		h = string[i];
+		h = string[x];
 		string[x++] = string[len];
 		string[len--] = h;
 	}
