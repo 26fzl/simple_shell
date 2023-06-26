@@ -13,9 +13,6 @@
 #include <signal.h>
 #include <fcntl.h>
 
-/************* MACROS **************/
-
-#include "macros.h"
 
 /************* STRUCTURES **************/
 
@@ -120,7 +117,7 @@ char **tokenize_path(data_of_program *data);
 int find_program(data_of_program *data);
 
 
-/************** HELPERS FOR MEMORY MANAGEMENT **************/
+/***** HELPERS FOR MEMORY MANAGEMENT *****/
 
 
 /*======== help_free.c ========*/
@@ -135,7 +132,7 @@ void free_recurrent_data(data_of_program *data);
 void free_all_data(data_of_program *data);
 
 
-/************** BUILTINS **************/
+/***** BUILTINS *****/
 
 
 /*======== built_more.c ========*/
@@ -168,26 +165,24 @@ int builtin_set_env(data_of_program *data);
 int builtin_unset_env(data_of_program *data);
 
 
-/************** HELPERS FOR ENVIRONMENT VARIABLES MANAGEMENT **************/
+/***** HELPERS FOR ENVIRONMENT VARIABLES MANAGEMENT *****/
 
 
-/*======== env_management.c ========*/
+/*=== env_managt.c ===*/
 
-/* Gets the value of an environment variable */
+/* Get a value of an environment variable */
 char *env_get_key(char *name, data_of_program *data);
 
-/* Overwrite the value of the environment variable */
+/* write the value of the environment variable */
 int env_set_key(char *key, char *value, data_of_program *data);
 
-/* Remove a key from the environment */
+/* Remove a key from a environment */
 int env_remove_key(char *key, data_of_program *data);
 
-/* prints the current environ */
+/* prints the current environment */
 void print_environ(data_of_program *data);
 
-
-/************** HELPERS FOR PRINTING **************/
-
+/**** HELPERS FOR PRINTING ****/
 
 /*======== help_print.c ========*/
 
@@ -200,8 +195,7 @@ int _printe(char *string);
 /* Prints a string in the standar error */
 int _print_error(int errorcode, data_of_program *data);
 
-
-/************** HELPERS FOR STRINGS MANAGEMENT **************/
+/**** HELPERS FOR STRINGS MANAGEMENT ****/
 
 
 /*======== help_string.c ========*/
@@ -246,4 +240,4 @@ char *get_alias(data_of_program *data, char *alias);
 int set_alias(char *alias_string, data_of_program *data);
 
 
-#endif /* SHELL_H */
+#endif
