@@ -20,10 +20,10 @@ int builtins_list(data_of_program *data)
 		{"unsetenv", builtin_unset_env},
 		{NULL, NULL}
 	};
-	for (itrtr = 0; options[iterator].builtin != NULL; iterator++)
+	for (itrtr = 0; options[itrtr].builtin != NULL; itrtr++)
 	{
-		if (str_compare(options[itrtr].builtin, data->command_name, 0)
-			return (options[iterator].function(data));
+		if (str_compare(options[itrtr].builtin, data->command_name, 0))
+			return (options[itrtr].function(data));
 	}
 	return (-1);
 }

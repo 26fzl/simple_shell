@@ -41,7 +41,7 @@ int builtin_cd(data_of_program *data)
 		{
 			dir_old = env_get_key("OLDPWD", data);
 			if (dir_old)
-				error_code = set_work_directory(data, dir_old);
+				err_code = set_work_directory(data, dir_old);
 			_print(env_get_key("PWD", data));
 			_print("\n");
 
@@ -120,7 +120,7 @@ int builtin_help(data_of_program *data)
 
 	for (x = 0; mensajes[x]; x++)
 	{
-		length = str_length(data->tokens[1]);
+		leng = str_length(data->tokens[1]);
 		if (str_compare(data->tokens[1], mensajes[x], leng))
 		{
 			_print(mensajes[x] + leng + 1);
