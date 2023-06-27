@@ -13,7 +13,7 @@ int print_alias(data_of_program *data, char *alias)
 
 	if (data->alias_list)
 	{
-		data = str_length(alias);
+		alias_length = str_length(alias);
 		for (x = 0; data->alias_list[x]; x++)
 		{
 			if (!alias || (str_compare(data->alias_list[x], alias, alias_leng)
