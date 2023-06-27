@@ -107,7 +107,7 @@ char *str_concat(char *string1, char *string2)
 	if (string2 == NULL)
 		string2 = "";
 	len2 = str_length(string2);
-	
+
 	result = malloc(sizeof(char) * (len1 + len2 + 1));
 
 	if (result == NULL)
